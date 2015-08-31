@@ -70,7 +70,8 @@ public class ContactsManager extends CordovaPlugin {
             ContactsContract.Data.MIMETYPE
         };
         // Retrieve only the contacts with a phone number at least
-        Cursor cursor = cr.query(ContactsContract.Data.CONTENT_URI,
+        //Cursor cursor = cr.query(ContactsContract.Data.CONTENT_URI,
+        Cursor cursor = cr.query(ContactsContract.Contacts.CONTENT_URI,
                 projection, 
                 ContactsContract.Contacts.HAS_PHONE_NUMBER + " = 1",
                 null,
